@@ -25,11 +25,8 @@ public class DetailFournisseur implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idDetailFournisseur;
-	private String email;
 	@Temporal(TemporalType.DATE)
 	private Date dateDebutCollaboration;
-	private String adresse;
-	private String matricule;
 	@OneToOne(mappedBy="detailFournisseur")
 	@JsonIgnore
 	private Fournisseur fournisseur;

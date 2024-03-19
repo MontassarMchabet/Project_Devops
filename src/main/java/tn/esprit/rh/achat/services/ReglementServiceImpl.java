@@ -12,10 +12,11 @@ import java.util.List;
 @Service
 public class ReglementServiceImpl implements IReglementService {
 
+	private final ReglementRepository reglementRepository;
 	@Autowired
-	FactureRepository factureRepository;
-	@Autowired
-	ReglementRepository reglementRepository;
+	public ReglementServiceImpl( ReglementRepository reglementRepository) {
+		this.reglementRepository = reglementRepository;
+	}
 	@Override
 	public List<Reglement> retrieveAllReglements() {
 		return (List<Reglement>) reglementRepository.findAll();
@@ -29,19 +30,12 @@ public class ReglementServiceImpl implements IReglementService {
 
 	@Override
 	public Reglement retrieveReglement(Long id) {
-		Reglement reglement = reglementRepository.findById(id).orElse(null);
-		
-		return reglement;
+		return reglementRepository.findById(id).orElse(null);
 	}
 
 	@Override
 	public List<Reglement> retrieveReglementByFacture(Long idFacture) {
-		List<Reglement> reglements= reglementRepository.retrieveReglementByFacture(idFacture);
-		return reglements;
-		
-//		ou bien(Sans JPQL)
-//		Facture f= factureRepository.findById(idFacture).get();
-//		return (List<Reglement>) f.getReglements();
+		return reglementRepository.retrieveReglementByFacture(idFacture);
 	}
 
 	@Override
