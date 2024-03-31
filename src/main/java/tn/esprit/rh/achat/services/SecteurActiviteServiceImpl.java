@@ -9,14 +9,15 @@ import java.util.List;
 
 @Service
 public class SecteurActiviteServiceImpl implements ISecteurActiviteService{
-
+	private final SecteurActiviteRepository secteurActiviteRepository;
 	@Autowired
-	SecteurActiviteRepository secteurActiviteRepository;
+	public SecteurActiviteServiceImpl(SecteurActiviteRepository secteurActiviteRepository) {
+		this.secteurActiviteRepository = secteurActiviteRepository;
+	}
 	@Override
 	public List<SecteurActivite> retrieveAllSecteurActivite() {
 		return (List<SecteurActivite>) secteurActiviteRepository.findAll();
 	}
-
 	@Override
 	public SecteurActivite addSecteurActivite(SecteurActivite sa) {
 		secteurActiviteRepository.save(sa);
@@ -37,8 +38,7 @@ public class SecteurActiviteServiceImpl implements ISecteurActiviteService{
 
 	@Override
 	public SecteurActivite retrieveSecteurActivite(Long id) {
-		SecteurActivite secteurActivite = secteurActiviteRepository.findById(id).orElse(null);
-		return secteurActivite;
+		return secteurActiviteRepository.findById(id).orElse(null);
 	}
 
 }

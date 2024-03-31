@@ -15,14 +15,13 @@ import java.util.List;
 @Service
 @Slf4j
 public class ProduitServiceImpl implements IProduitService {
-
+	private final ProduitRepository produitRepository;
+	private final StockRepository stockRepository;
 	@Autowired
-	ProduitRepository produitRepository;
-	@Autowired
-	StockRepository stockRepository;
-	@Autowired
-	CategorieProduitRepository categorieProduitRepository;
-
+	public ProduitServiceImpl(ProduitRepository produitRepository, StockRepository stockRepository) {
+		this.produitRepository = produitRepository;
+		this.stockRepository = stockRepository;
+	}
 	@Override
 	public List<Produit> retrieveAllProduits() {
 		List<Produit> produits = (List<Produit>) produitRepository.findAll();

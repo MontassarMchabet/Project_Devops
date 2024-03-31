@@ -9,9 +9,12 @@ import java.util.List;
 
 @Service
 public class OperateurServiceImpl implements IOperateurService {
-
+	private final OperateurRepository operateurRepository;
 	@Autowired
-	OperateurRepository operateurRepository;
+	public OperateurServiceImpl(OperateurRepository operateurRepository) {
+		this.operateurRepository = operateurRepository;
+	}
+
 	@Override
 	public List<Operateur> retrieveAllOperateurs() {
 		return (List<Operateur>) operateurRepository.findAll();
@@ -37,8 +40,7 @@ public class OperateurServiceImpl implements IOperateurService {
 
 	@Override
 	public Operateur retrieveOperateur(Long id) {
-		Operateur operateur = operateurRepository.findById(id).orElse(null);
-		return operateur;
+		return operateurRepository.findById(id).orElse(null);
 	}
 
 }
