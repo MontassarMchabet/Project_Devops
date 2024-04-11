@@ -99,8 +99,6 @@ f
 6src/main/java/tn/esprit/rh/achat/entities/Facture.java,3\c\3c6f7760de745cb3c28e4dc7e4888c90b2865084
 d
 4src/main/java/tn/esprit/rh/achat/entities/Stock.java,a\5\a5c49a5cefc42bc70e4059187de7e58eb40bff0f
->
-src/Dockerfile,b\1\b1ac484b20625f94ee8fee74dce04369ea1760f1
 :
 
 DockerFile,4\0\40f7331d8e28c3c74df3da70560f362ea1796985
@@ -109,5 +107,3 @@ DockerFile,4\0\40f7331d8e28c3c74df3da70560f362ea1796985
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 9
 	achat.iml,4\a\4a938249f4d174adc7e536ac793ceb734147de98
-H
-sonar-project.properties,2\5\2538046035efb77ecc44e1fd2eec1e2641594d4c
