@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-  invoice:
+  achat:
     build: .
     ports:
       - "8089:8089"
@@ -16,5 +16,5 @@ services:
     ports:
       - 3366:3366
     environment:
-      MYSQL_DATABASE: invoicedb
+      MYSQL_DATABASE: achatdb
       MYSQL_ROOT_PASSWORD: root
