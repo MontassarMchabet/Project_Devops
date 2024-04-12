@@ -13,3 +13,7 @@ C
 docker-compose.yaml,e\f\ef8def03dc8f162799089e9b5f4321201c8810d5
 d
 4src/main/java/tn/esprit/rh/achat/entities/Stock.java,a\5\a5c49a5cefc42bc70e4059187de7e58eb40bff0f
+s
+Csrc/main/java/tn/esprit/rh/achat/entities/CategorieFournisseur.java,3\5\35d48a2e7f6c16ed909bb72fd4105500e957b4cb
+o
+?src/main/java/tn/esprit/rh/achat/entities/CategorieProduit.java,9\a\9ae45bcb50bc63be86a9b117995c406add4209b8
