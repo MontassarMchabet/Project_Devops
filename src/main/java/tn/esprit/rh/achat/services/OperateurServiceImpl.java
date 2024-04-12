@@ -20,11 +20,6 @@ public class OperateurServiceImpl implements IOperateurService {
 		return (List<Operateur>) operateurRepository.findAll();
 	}
 
-	@Override
-	public Operateur addOperateur(Operateur o) {
-		operateurRepository.save(o);
-		return o;
-	}
 
 	@Override
 	public void deleteOperateur(Long id) {
@@ -32,11 +27,12 @@ public class OperateurServiceImpl implements IOperateurService {
 		
 	}
 
+
 	@Override
-	public Operateur updateOperateur(Operateur o) {
-		operateurRepository.save(o);
-		return o;
+	public Operateur addOrUpdateOperateur(Operateur o){
+		return operateurRepository.save(o);
 	}
+
 
 	@Override
 	public Operateur retrieveOperateur(Long id) {

@@ -3,7 +3,6 @@ package tn.esprit.rh.achat.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.rh.achat.entities.Reglement;
-import tn.esprit.rh.achat.repositories.FactureRepository;
 import tn.esprit.rh.achat.repositories.ReglementRepository;
 
 import java.util.Date;
@@ -40,7 +39,8 @@ public class ReglementServiceImpl implements IReglementService {
 
 	@Override
 	public float getChiffreAffaireEntreDeuxDate(Date startDate, Date endDate) {
-		return reglementRepository.getChiffreAffaireEntreDeuxDate( startDate, endDate);
+		//return reglementRepository.getChiffreAffaireEntreDeuxDate( startDate, endDate);
+		return 0;
 	}
 
 }

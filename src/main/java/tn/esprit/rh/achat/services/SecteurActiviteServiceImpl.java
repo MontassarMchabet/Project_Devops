@@ -6,6 +6,7 @@ import tn.esprit.rh.achat.entities.SecteurActivite;
 import tn.esprit.rh.achat.repositories.SecteurActiviteRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SecteurActiviteServiceImpl implements ISecteurActiviteService{
@@ -18,11 +19,6 @@ public class SecteurActiviteServiceImpl implements ISecteurActiviteService{
 	public List<SecteurActivite> retrieveAllSecteurActivite() {
 		return (List<SecteurActivite>) secteurActiviteRepository.findAll();
 	}
-	@Override
-	public SecteurActivite addSecteurActivite(SecteurActivite sa) {
-		secteurActiviteRepository.save(sa);
-		return sa;
-	}
 
 	@Override
 	public void deleteSecteurActivite(Long id) {
@@ -31,9 +27,20 @@ public class SecteurActiviteServiceImpl implements ISecteurActiviteService{
 	}
 
 	@Override
-	public SecteurActivite updateSecteurActivite(SecteurActivite sa) {
-		secteurActiviteRepository.save(sa);
-		return sa;
+	public SecteurActivite saveOrUpdateSecteurActivite(SecteurActivite sa) {
+		// Check if the secteurActivite already exists in the database
+		Optional<SecteurActivite> existingSecteurActivite = secteurActiviteRepository.findById(sa.getIdSecteurActivite());
+
+		if (existingSecteurActivite.isPresent()) {
+			// If the secteurActivite exists, update it
+			SecteurActivite updatedSecteurActivite = existingSecteurActivite.get();
+			updatedSecteurActivite.setFournisseurs(sa.getFournisseurs());
+
+			return secteurActiviteRepository.save(updatedSecteurActivite);
+		} else {
+			// If the secteurActivite does not exist, add it
+			return secteurActiviteRepository.save(sa);
+		}
 	}
 
 	@Override
