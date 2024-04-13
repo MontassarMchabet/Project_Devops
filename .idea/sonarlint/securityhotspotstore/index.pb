@@ -8,3 +8,5 @@ f
 :
 
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
+|
+Lsrc/main/java/tn/esprit/rh/achat/controllers/CategorieProduitController.java,c\1\c1a89e2c5d5f3966bce3e096d96c2d018b79d69f
