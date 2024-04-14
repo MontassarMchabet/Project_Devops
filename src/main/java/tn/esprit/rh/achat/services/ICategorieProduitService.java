@@ -9,11 +9,9 @@ public interface ICategorieProduitService {
 
 	List<CategorieProduit> retrieveAllCategorieProduits();
 
-	CategorieProduit addCategorieProduit(CategorieProduit cp);
-
 	void deleteCategorieProduit(Long id);
 
-	CategorieProduit updateCategorieProduit(CategorieProduit cp);
+	CategorieProduit addOrUpdateCategorieProduit(CategorieProduit cp);
 
 	CategorieProduit retrieveCategorieProduit(Long id);
 

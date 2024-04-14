@@ -29,7 +29,7 @@ public class FournisseurServiceImpl implements IFournisseurService {
 
 	@Override
 	public List<Fournisseur> retrieveAllFournisseurs() {
-		List<Fournisseur> fournisseurs = (List<Fournisseur>) fournisseurRepository.findAll();
+		List<Fournisseur> fournisseurs = fournisseurRepository.findAll();
 		for (Fournisseur fournisseur : fournisseurs) {
 			log.info(" fournisseur : " + fournisseur);
 		}
@@ -74,12 +74,17 @@ public class FournisseurServiceImpl implements IFournisseurService {
 	public void assignSecteurActiviteToFournisseur(Long idSecteurActivite, Long idFournisseur) {
 		Fournisseur fournisseur = fournisseurRepository.findById(idFournisseur).orElse(null);
 		SecteurActivite secteurActivite = secteurActiviteRepository.findById(idSecteurActivite).orElse(null);
-        fournisseur.getSecteurActivites().add(secteurActivite);
-        fournisseurRepository.save(fournisseur);
-		
-		
+
+		// Check if either fournisseur or secteurActivite is null
+		if (fournisseur == null || secteurActivite == null) {
+			throw new IllegalArgumentException("Fournisseur or SecteurActivite not found");
+		} else {
+			fournisseur.getSecteurActivites().add(secteurActivite);
+			fournisseurRepository.save(fournisseur);
+		}
 	}
 
-	
+
+
 
 }

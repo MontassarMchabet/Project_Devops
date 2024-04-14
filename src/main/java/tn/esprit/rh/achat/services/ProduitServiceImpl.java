@@ -24,21 +24,17 @@ public class ProduitServiceImpl implements IProduitService {
 	}
 	@Override
 	public List<Produit> retrieveAllProduits() {
-		List<Produit> produits = (List<Produit>) produitRepository.findAll();
+		List<Produit> produits = produitRepository.findAll();
 		for (Produit produit : produits) {
 			log.info(" Produit : " + produit);
 		}
 		return produits;
 	}
-
 	@Transactional
 	public Produit addProduit(Produit p) {
 		produitRepository.save(p);
 		return p;
 	}
-
-	
-
 	@Override
 	public void deleteProduit(Long produitId) {
 		produitRepository.deleteById(produitId);
@@ -60,10 +56,13 @@ public class ProduitServiceImpl implements IProduitService {
 	public void assignProduitToStock(Long idProduit, Long idStock) {
 		Produit produit = produitRepository.findById(idProduit).orElse(null);
 		Stock stock = stockRepository.findById(idStock).orElse(null);
-		produit.setStock(stock);
-		produitRepository.save(produit);
 
+		// Check if either produit or stock is null
+		if (produit == null || stock == null) {
+			throw new IllegalArgumentException("Produit or Stock not found");
+		} else {
+			produit.setStock(stock);
+			produitRepository.save(produit);
+		}
 	}
-
-
 }

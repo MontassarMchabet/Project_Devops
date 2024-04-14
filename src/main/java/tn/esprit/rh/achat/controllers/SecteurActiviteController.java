@@ -34,7 +34,7 @@ public class SecteurActiviteController {
 	// http://localhost:8089/SpringMVC/secteurActivite/add-secteurActivite
 	@PostMapping("/add-secteurActivite")
 	public SecteurActivite addSecteurActivite(@RequestBody SecteurActivite sa) {
-		return secteurActiviteService.addSecteurActivite(sa);
+		return secteurActiviteService.saveOrUpdateSecteurActivite(sa);
 	}
 
 	@DeleteMapping("/remove-secteurActivite/{secteurActivite-id}")
@@ -44,7 +44,7 @@ public class SecteurActiviteController {
 
 	@PutMapping("/modify-secteurActivite")
 	public SecteurActivite modifySecteurActivite(@RequestBody SecteurActivite secteurActivite) {
-		return secteurActiviteService.updateSecteurActivite(secteurActivite);
+		return secteurActiviteService.saveOrUpdateSecteurActivite(secteurActivite);
 	}
 
 	

@@ -15,16 +15,16 @@ import java.util.List;
 public interface FactureRepository extends JpaRepository<Facture, Long> {
 
 	
-	@Query("SELECT f FROM Facture f where f.fournisseur=:fournisseur and f.archivee=false")
-	public List<Facture> getFactureByFournisseur(@Param("fournisseur") Fournisseur fournisseur);
+	/*@Query("SELECT f FROM Facture f where f.fournisseur=:fournisseur and f.archivee=false")
+	public List<Facture> getFactureByFournisseur(@Param("fournisseur") Fournisseur fournisseur);*/
 
 	
-	@Query("SELECT sum(f.montantFacture) FROM Facture f where  f.dateCreationFacture between :startDate"
+	/*@Query("SELECT sum(f.montantFacture) FROM Facture f where  f.dateCreationFacture between :startDate"
 			+ " and :endDate and f.archivee=false")
-	float getTotalFacturesEntreDeuxDates(@Param("startDate") Date startDate, @Param("endDate") Date endDate);
+	float getTotalFacturesEntreDeuxDates(@Param("startDate") Date startDate, @Param("endDate") Date endDate);*/
 
-	@Modifying
+	/*@Modifying
 	@Query("update Facture f set f.archivee=true where f.idFacture=?1")
-	void updateFacture(Long id);
+	void updateFacture(Long id);*/
 	
 }
