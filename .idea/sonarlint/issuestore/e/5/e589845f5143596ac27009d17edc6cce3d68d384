@@ -1,16 +1,0 @@
-
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(ñ™²®üÿÿÿÿ8û·©“í1J$92008f38-2743-489a-a976-d0bf8e0bd70d
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(ñ‹Ôÿÿÿÿÿ8Í¢³“í1J$895f5a84-9be1-4e84-8b6f-40739f3e6c25
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(­¼‚úÿÿÿÿ8ñ¬“í1J$ec8e57ba-8350-4e0f-aeb1-43598dcb579e
-–
-java:S1128"NRemove this unused import 'org.springframework.data.jpa.repository.Modifying'.(—·Ñ”şÿÿÿÿ8ñ¬“í1J$eb79a447-bfec-4233-ac08-aa418e13f49d
-’
-java:S1128"JRemove this unused import 'org.springframework.data.jpa.repository.Query'.(Äºöïşÿÿÿÿ8Î¢³“í1J$2deb0e74-0706-4387-8c91-8e6683d5dba7
-
-java:S1128"LRemove this unused import 'org.springframework.data.repository.query.Param'.(©”šô8Ï¢³“í1J$8a57e27f-d2b6-498d-8283-f634201ba128
-‡
-java:S1128	"DRemove this unused import 'tn.esprit.rh.achat.entities.Fournisseur'.(‘ù¢ş8ÿ·©“í1J$3e09d816-6311-4ea5-9ed3-1d14e16242a9
-n
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8Ï¢³“í1J$712aa913-d9f1-44a0-952a-274226c26029
-s
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8€¸©“í1J$c225ee64-97e6-45b4-8005-109b66f0efbe

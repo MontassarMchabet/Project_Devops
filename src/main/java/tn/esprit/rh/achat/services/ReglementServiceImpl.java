@@ -39,7 +39,6 @@ public class ReglementServiceImpl implements IReglementService {
 
 	@Override
 	public float getChiffreAffaireEntreDeuxDate(Date startDate, Date endDate) {
-		//return reglementRepository.getChiffreAffaireEntreDeuxDate( startDate, endDate);
 		return 0;
 	}
 

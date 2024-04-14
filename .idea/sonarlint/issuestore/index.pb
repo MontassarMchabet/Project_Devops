@@ -109,7 +109,3 @@ Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 	achat.iml,4\a\4a938249f4d174adc7e536ac793ceb734147de98
 B
 docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
-C
-docker-compose.yaml,e\f\ef8def03dc8f162799089e9b5f4321201c8810d5
-l
-<src/main/java/tn/esprit/rh/achat/entitiesDTO/FactureDTO.java,7\f\7f33fd4bdadd575b28faab2f2997bcd07195c0ab

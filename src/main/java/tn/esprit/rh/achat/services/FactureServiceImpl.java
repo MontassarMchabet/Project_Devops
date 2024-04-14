@@ -91,10 +91,7 @@ public class FactureServiceImpl implements IFactureService {
 
 	@Override
 	public float pourcentageRecouvrement(Date startDate, Date endDate) {
-		//float totalFacturesEntreDeuxDates = factureRepository.getTotalFacturesEntreDeuxDates(startDate,endDate);
-		float totalRecouvrementEntreDeuxDates =reglementService.getChiffreAffaireEntreDeuxDate(startDate,endDate);
-		//return (totalRecouvrementEntreDeuxDates/totalFacturesEntreDeuxDates)*100;
-		return totalRecouvrementEntreDeuxDates;
+		return reglementService.getChiffreAffaireEntreDeuxDate(startDate,endDate);
 	}
 	
 
