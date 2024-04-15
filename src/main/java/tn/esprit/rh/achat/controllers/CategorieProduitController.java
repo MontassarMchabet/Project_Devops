@@ -47,7 +47,7 @@ public class CategorieProduitController {
 	}
 
 	// http://localhost:8089/SpringMVC/categorieProduit/modify-categorieProduit
-	@PutMapping("/modify-categorieProduit")
+	@PutMapping("/modify-categorieProduits")
 	@ResponseBody
 	public CategorieProduit modifyCategorieProduit(@RequestBody CategorieProduit categorieProduit) {
 		return categorieProduitService.updateCategorieProduit(categorieProduit);
